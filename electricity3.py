@@ -12,7 +12,7 @@ return_value = st.sidebar.selectbox(
      ['Total','Wind','Gas', 'Coal', 'Others'])
 
 # Load financial dataset
-df1 = pd.read_csv("C:/Code/electricity_ireland_data_2021.csv")
+df1 = pd.read_csv("electricity_ireland_data_2021.csv")
 
 # Body
 st.title('Electricity Generation In Ireland')
