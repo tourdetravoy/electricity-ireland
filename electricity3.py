@@ -3,7 +3,6 @@ from datetime import datetime
 import streamlit as st
 import numpy as np
 import pandas as pd
-import ta
 import altair as alt
 
 # Sidebar
