@@ -96,8 +96,8 @@ col3.metric("Total Power Generated in Ireland 2021", "31,178 GWh", "3.7 %")
 
 col1, col2, col3 = st.columns(3)
 col1.metric("Total Power from Renewables 2022", "11,924 GWh", "3.7 %")
-col2.metric("Total Power from Fossil Fuels 2022", "19,326", "3.8 %")
-col3.metric("Total Power Generated in Ireland 2022", "32,105 GWh"", "2.7 %")
+col2.metric("Total Power from Fossil Fuels 2022", "19,326 GWh", "3.8 %")
+col3.metric("Total Power Generated in Ireland 2022", "32,105 GWh", "2.7 %")
 
 normal_chart = alt.Chart(df1).mark_area().encode(
 x='Year:O',
