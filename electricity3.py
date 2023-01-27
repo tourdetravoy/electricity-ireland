@@ -33,11 +33,11 @@ st.altair_chart(bar_chart)
 
 st.title('Windpower Generation In Ireland')
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Wind 2019", "9,968 GWh", "15.9 %")
-col2.metric("Wind 2020", "11,495 GWh", "15.3 %")
-col3.metric("Wind 2021", "9,887 GWh", "-12.0 %")
-col4.metric("Wind 2022", "11,224 GWh", "13.5 %")
+col1, col2, col3 = st.columns(3)
+
+col1.metric("Wind 2020", "11,495 GWh", "15.3 %")
+col2.metric("Wind 2021", "9,887 GWh", "-12.0 %")
+col3.metric("Wind 2022", "11,224 GWh", "13.5 %")
 
 dfwind = df1[(df1['Type']=='Wind')]
 
@@ -52,11 +52,11 @@ st.altair_chart(bar_chart_wind)
 
 st.title('Natural Gas Generation In Ireland')
 
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Natural Gas 2019", "14,814 GWh", "-0.4 %")
-col2.metric("Natural Gas 2020", "15,063 GWh", "1.7 %")
-col3.metric("Natural Gas 2021", "13,993 GWh", "-7.1 %")
-col4.metric("Natural Gas 2022", "15,435 GWh", "11.1 %")
+col1, col2, col3 = st.columns(3)
+
+col1.metric("Natural Gas 2020", "15,063 GWh", "1.7 %")
+col2.metric("Natural Gas 2021", "13,993 GWh", "-7.1 %")
+col3.metric("Natural Gas 2022", "15,435 GWh", "11.1 %")
 
 df_gas = df1[(df1['Type']=='Gas')]
 
@@ -72,10 +72,10 @@ st.altair_chart(bar_chart_gas)
 st.title('Total Generation In Ireland')
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Total Generation 2019", "29,649 GWh", "2.2 %")
-col2.metric("Total Generation 2020", "30,053 GWh", "1.4 %")
-col3.metric("Total Generation 2021", "31,178 GWh", "3.7 %")
-col4.metric("Total Generation 2022", "32.105 GWh", "3.2 %")
+
+col1.metric("Total Generation 2020", "30,053 GWh", "1.4 %")
+col2.metric("Total Generation 2021", "31,178 GWh", "3.7 %")
+col3.metric("Total Generation 2022", "32.105 GWh", "3.2 %")
 
 area_chart = alt.Chart(df1).mark_area().encode(
 x='Year:O',
@@ -112,7 +112,7 @@ st.altair_chart(normal_chart)
 st.title('Electricity Ireland 2010 - 2022')
 
 chart = alt.Chart(df1).mark_bar().encode(
-x=alt.X('sum(GWh)', stack="zero"),
+x=alt.X('sum(GWh)', stack="normalize"),
 y='Year:O',
 color=alt.Color('Type'),
 tooltip=['Year', 'Type', 'GWh'],).interactive().properties(
@@ -126,8 +126,8 @@ df_ff = df1[(df1['Type']=='Gas')&(df1['Type']=='Coal')&(df1['Type']=='Oil')]
 bar_chart_ff = alt.Chart(df_ff).mark_bar().encode(
 x=alt.X('Year:O'),
 y=alt.Y('GWh:Q', stack='zero'),
-tooltip=['Year', 'GWh'],).properties(
+tooltip=['Year', 'GWh'],).interactive().properties(
     width=700,
     height=500
-).interactive()
+)
 st.altair_chart(bar_chart_ff)
