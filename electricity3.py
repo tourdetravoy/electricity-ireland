@@ -6,9 +6,9 @@ import pandas as pd
 import altair as alt
 
 # Sidebar
-return_value = st.sidebar.selectbox(
-    'Electricity generated each year',
-     ['Total','Wind','Gas', 'Coal', 'Others'])
+# return_value = st.sidebar.selectbox(
+   # 'Electricity generated each year',
+   #  ['Total','Wind','Gas', 'Coal', 'Others'])
 
 # Load electricity dataset
 df1 = pd.read_csv("electricity_ireland_data_2021.csv")
