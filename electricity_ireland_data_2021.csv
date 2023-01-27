@@ -11,6 +11,7 @@ Year,Type,GWh
 2019,Wind,9968
 2020,Wind,11495
 2021,Wind,9667
+2022,Wind,11224
 2010,Water,552
 2011,Water,680
 2012,Water,761
@@ -23,6 +24,7 @@ Year,Type,GWh
 2019,Water,877
 2020,Water,923
 2021,Water,740
+2022,Water,700
 2010,Gas,17159
 2011,Gas,14433
 2012,Gas,13076
@@ -35,6 +37,7 @@ Year,Type,GWh
 2019,Gas,14814
 2020,Gas,15063
 2021,Gas,13993
+2022,Gas,15435
 2010,Coal,3472
 2011,Coal,3835
 2012,Coal,4892
@@ -47,6 +50,7 @@ Year,Type,GWh
 2019,Coal,579
 2020,Coal,765
 2021,Coal,3297
+2022,Coal,2512
 2010,Peat,2090
 2011,Peat,2074
 2012,Peat,2415
@@ -59,6 +63,7 @@ Year,Type,GWh
 2019,Peat,2105
 2020,Peat,1221
 2021,Peat,682
+2022,Peat,653
 2010,Oil,304
 2011,Oil,73
 2012,Oil,36
@@ -71,6 +76,7 @@ Year,Type,GWh
 2019,Oil,132
 2020,Oil,226
 2021,Oil,642
+2022,Oil,726
 2010,Others,606
 2011,Others,663
 2012,Others,4379
@@ -82,4 +88,5 @@ Year,Type,GWh
 2018,Others,453
 2019,Others,1174
 2020,Others,360
-2021,Others,4221
+2021,Others,2157
+2022,Others,855
